@@ -92,7 +92,7 @@ private:
 
 class ProgramRoot : public ExprAST {
 public:
-    explicit ProgramRoot(std::vector<Expression> val) : value(val) {} // what what
+    explicit ProgramRoot(std::vector<Expression> val) : value(val) {}
 
     NodeType nodeType() const override {
         return NodeType::ProgramRoot;
@@ -111,7 +111,7 @@ private:
 
 class IdentifierExpr : public ExprAST {
 public:
-    explicit IdentifierExpr(std::string val) : name(val) {} // what what
+    explicit IdentifierExpr(std::string val) : name(val) {}
 
     NodeType nodeType() const override {
         return NodeType::IdentifierExpr;
