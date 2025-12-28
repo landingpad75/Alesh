@@ -2,6 +2,8 @@
 #include <unordered_map>
 #include <string>
 
+#define stringifyTKT(x) #x
+
 enum class TokenType {
     String,
     Number,
@@ -30,8 +32,9 @@ struct Token {
     int l, c; // line, column
 
     std::string value; // value must be a string since the whole file is a string
-    TokenType kind; // thats all i guess
+    TokenType kind; // Token Kind (e.g. Return)
 
+    Token() {}
     Token(TokenType type) : kind(type), value(""), l(0), c(0) {}
     Token(TokenType type, std::string val) : kind(type), value(val), l(0), c(0) {}
     Token(TokenType type, std::string val, int line, int col) : kind(type), value(val), l(line), c(col) {}

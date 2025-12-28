@@ -4,9 +4,9 @@
 
 class Lexer {
 public:
-    Lexer(std::string code);
+    Lexer();
 
-    std::vector<Token> tokenize();
+    std::vector<Token> tokenize(std::string code);
 
 private:
     std::string code; // we store the code here

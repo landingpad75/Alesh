@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(alesh
+    src/parser/parser.cpp
+
     src/lexer/lexer.hpp
     src/lexer/token.hpp
     
@@ -14,5 +16,5 @@ add_executable(alesh
 )
 
 target_include_directories(alesh PRIVATE
-    include
+    src
 )

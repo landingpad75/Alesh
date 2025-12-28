@@ -3,7 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <tui/colors.hpp>
+#include <utils/color.hpp>
 #include <filesystem>
 #include "lexer/lexer.hpp"
 
@@ -31,9 +31,9 @@ int main(int argc, char* argv[], char* envp[]) {
         return 1;
     }
     
-    Lexer lexer(readFile(argv[1]));
+    Lexer lexer;
 
-    lexer.tokenize();
+    lexer.tokenize(readFile(argv[1]));
 
     return 0;
 }
